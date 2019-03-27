@@ -5,6 +5,7 @@ A ResNet Model
 from keras import layers
 from keras.models import Model
 
+# add a BNlayer and relu activation
 def _after_conv(in_tensor):
    norm = layers.BatchNormalization()(in_tensor)
    return layers.Activation('relu')(norm)
